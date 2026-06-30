@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Show com Flex</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .galeria {
+      width: 760px;
+      height: 360px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .foto {
+      flex: 1;
+      border-radius: 28px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+      transition: flex 0.5s ease, filter 0.5s ease;
+      cursor: pointer;
+      filter: brightness(0.85);
+    }
+
+    .foto:hover {
+      flex: 5;
+      filter: brightness(1);
+    }
+
+    .foto span {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px black;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .foto:hover span {
+      opacity: 1;
+    }
+
+    .foto1 { background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)), url("https://picsum.photos/id/1018/800/600"); }
+    .foto2 { background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)), url("https://picsum.photos/id/1015/800/600"); }
+    .foto3 { background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)), url("https://picsum.photos/id/1016/800/600"); }
+    .foto4 { background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)), url("https://picsum.photos/id/1024/800/600"); }
+    .foto5 { background-image: linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)), url("https://picsum.photos/id/1039/800/600"); }
+  </style>
+</head>
+<body>
+  <section class="galeria">
+    <div class="foto foto1"><span>Estrada</span></div>
+    <div class="foto foto2"><span>Montanha</span></div>
+    <div class="foto foto3"><span>Natureza</span></div>
+    <div class="foto foto4"><span>Viagem</span></div>
+    <div class="foto foto5"><span>Fim de tarde</span></div>
+  </section>
+</body>
+</html>
