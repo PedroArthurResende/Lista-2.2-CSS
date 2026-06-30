@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout com Flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .janela {
+      width: 720px;
+      height: 560px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .barra-topo {
+      height: 90px;
+      background-color: #222222;
+      display: flex;
+      align-items: center;
+      padding-left: 35px;
+      gap: 18px;
+    }
+
+    .bolinha {
+      width: 28px;
+      height: 28px;
+      background-color: #00b8b8;
+      border-radius: 50%;
+    }
+
+    .parte-de-baixo {
+      flex: 1;
+      display: flex;
+    }
+
+    nav {
+      width: 170px;
+      background-color: #ff7f2a;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 25px;
+    }
+
+    .area-principal {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header,
+    footer {
+      height: 90px;
+      background-color: #08a9cc;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      flex: 1;
+      background-color: #6450aa;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 35px;
+    }
+  </style>
+</head>
+<body>
+  <div class="janela">
+    <div class="barra-topo">
+      <span class="bolinha"></span>
+      <span class="bolinha"></span>
+      <span class="bolinha"></span>
+    </div>
+
+    <div class="parte-de-baixo">
+      <nav>NAVEGAÇÃO</nav>
+
+      <div class="area-principal">
+        <header>CABEÇALHO</header>
+        <main>CONTEÚDO</main>
+        <footer>RODAPÉ</footer>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
