@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout com Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grade {
+      width: 520px;
+      height: 360px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr 1fr;
+      grid-template-rows: 80px 80px 80px 80px;
+      gap: 8px;
+    }
+
+    .caixa {
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .amarela { background-color: #ffd978; }
+    .rosa { background-color: #ef3d67; }
+
+    .c1 { grid-column: 1 / 4; }
+    .c3 { grid-row: 2 / 4; grid-column: 2; }
+    .c5 { grid-row: 3 / 5; }
+    .c7 { grid-column: 2 / 4; }
+  </style>
+</head>
+<body>
+  <section class="grade">
+    <div class="caixa amarela c1">1</div>
+    <div class="caixa rosa c2">2</div>
+    <div class="caixa amarela c3">3</div>
+    <div class="caixa rosa c4">4</div>
+    <div class="caixa amarela c5">5</div>
+    <div class="caixa rosa c6">6</div>
+    <div class="caixa amarela c7">7</div>
+  </section>
+</body>
+</html>
